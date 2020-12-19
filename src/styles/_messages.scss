@@ -5,6 +5,10 @@
   overflow-y: auto;
   border-bottom: 4px solid $primary-color;
 
+  @media screen and (max-width: 500px) {
+    height: 84vh;
+  }
+
   li {
     margin: 0.5rem 0;
     display: flex;
