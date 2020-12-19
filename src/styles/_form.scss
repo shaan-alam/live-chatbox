@@ -1,0 +1,37 @@
+form {
+  display: flex;
+
+  & > input {
+    flex: 5;
+    border: none;
+    color: $primary-color;
+    padding: 1rem;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+
+    @media screen and (max-width: 500px) {
+      flex: 3;
+    }
+  }
+
+  & > button {
+    flex: 1;
+    background: $primary-color;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s;
+
+    &:focus {
+      outline: none;
+      border: none;
+    }
+
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.home {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 100%;
+  box-shadow: 0 4px 4px lighten($primary-color, 40%);
+
+  @media screen and (max-width: 500px) {
+    width: 80%;
+  }
+}

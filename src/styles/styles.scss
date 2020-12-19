@@ -1,0 +1,24 @@
+$primary-color: #593e90;
+$secondary-color: #322b26;
+
+// global style
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.App {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@import "home";
+@import "header";
+@import "messages";
+@import "form";

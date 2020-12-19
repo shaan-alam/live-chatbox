@@ -1,0 +1,20 @@
+.messages {
+  height: 400px;
+  padding: 1rem;
+  list-style: none;
+  overflow-y: auto;
+  border-bottom: 4px solid $primary-color;
+
+  li {
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: flex-start;
+
+    p {
+      padding: 12px;
+      color: #fff;
+      border-radius: 1.5rem;
+      background: $primary-color;
+    }
+  }
+}
