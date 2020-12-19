@@ -1,1 +1,1 @@
-[https://live-chatbox.web.app](Click here for Demo)
+[Click here](https://live-chatbox.web.app/) for Live Demo.
