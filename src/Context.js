@@ -31,7 +31,6 @@ export default function ContextProvider({ children }) {
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       userAvatarSrc: authState.avatarSrc,
     });
-    // setMessages([...messages, message]);
   };
 
   return (

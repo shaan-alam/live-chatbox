@@ -23,6 +23,7 @@ const Home = ({ history }) => {
           username: null,
           avatarSrc: null,
         });
+        history.push("/");
       }
     });
   }, []);

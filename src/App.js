@@ -1,6 +1,6 @@
 import Home from "./components/Home";
 import Login from "./components/Login";
-import PrivateRoute from "./PrivateRoute";
+// import PrivateRoute from "./PrivateRoute";
 import "./styles/styles.scss";
 
 import { Switch, Route } from "react-router-dom";
@@ -9,7 +9,7 @@ const App = () => {
   return (
     <Switch>
       <Route path="/" component={Login} exact />
-      <PrivateRoute path="/home" component={Home} />
+      <Route path="/home" component={Home} />
     </Switch>
   );
 };
