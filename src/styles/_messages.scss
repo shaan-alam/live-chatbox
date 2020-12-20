@@ -13,6 +13,14 @@
     margin: 0.5rem 0;
     display: flex;
     justify-content: flex-start;
+    align-items: center;
+
+    img {
+      margin-right: 10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+    }
 
     p {
       padding: 12px;

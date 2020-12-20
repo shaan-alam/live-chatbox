@@ -1,8 +1,17 @@
 import Home from "./components/Home";
+import Login from "./components/Login";
+import PrivateRoute from "./PrivateRoute";
 import "./styles/styles.scss";
 
+import { Switch, Route } from "react-router-dom";
+
 const App = () => {
-  return <Home />;
+  return (
+    <Switch>
+      <Route path="/" component={Login} exact />
+      <PrivateRoute path="/home" component={Home} />
+    </Switch>
+  );
 };
 
 export default App;

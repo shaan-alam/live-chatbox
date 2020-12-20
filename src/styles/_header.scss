@@ -2,11 +2,50 @@ header {
   background: $secondary-color;
   color: #fff;
   padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
+  .user_profile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+      height: 30px;
+      width: 30px;
+      margin-left: 13px;
+      border-radius: 100%;
+    }
+
+    @media screen and (max-width: 500px) {
+      width: 100%;
+    }
+  }
 
   h1 {
     @media screen and (max-width: 500px) {
       font-size: 100%;
     }
+  }
+}
+
+.logout_btn {
+  background: #ff1f2d;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  border: none;
+  transition: all 0.4s;
+  cursor: pointer;
+  margin-left: 13px;
+
+  &:focus {
+    outline: none;
+    border: none;
+  }
+
+  &:hover {
+    background: darken(#ff1f2d, 10%);
   }
 }

@@ -6,6 +6,7 @@ import { Context } from "../Context";
 const Messages = () => {
   const { messages } = useContext(Context);
 
+
   return (
     <ul>
       <ScrollToBottom className="messages">

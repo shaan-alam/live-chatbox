@@ -13,6 +13,29 @@ body {
   background: $primary-color;
 }
 
+// custom scrollbar css
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff1f2d;
+  border-radius: 8px;
+  transition: all 0.4s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: darken(#ff1f2d, 10%);
+}
+
 .App {
   height: 100vh;
   width: 100%;
@@ -22,3 +45,4 @@ body {
 @import "header";
 @import "messages";
 @import "form";
+@import "login";
