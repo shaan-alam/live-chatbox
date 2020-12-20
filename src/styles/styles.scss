@@ -1,5 +1,5 @@
-$primary-color: #593e90;
-$secondary-color: #322b26;
+$primary-color: #121212;
+$secondary-color: rgba(255, 255, 255, 0.05);
 
 // global style
 * {
@@ -7,6 +7,10 @@ $secondary-color: #322b26;
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background: $primary-color;
 }
 
 .App {

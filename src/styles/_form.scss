@@ -2,6 +2,7 @@ form {
   display: flex;
 
   & > input {
+    background: $secondary-color;
     flex: 5;
     border: none;
     color: $primary-color;
@@ -19,7 +20,7 @@ form {
 
   & > button {
     flex: 1;
-    background: $primary-color;
+    background: #ff1f2d;
     color: #fff;
     border: none;
     cursor: pointer;
