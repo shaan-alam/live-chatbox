@@ -8,7 +8,11 @@ const Form = () => {
   const submitMessage = (e) => {
     e.preventDefault();
 
-    handleMessages(message);
+    // check if the message is not null
+    if (message) {
+      handleMessages(message);
+    }
+    
     setMessage("");
   };
 

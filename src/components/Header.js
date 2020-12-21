@@ -3,7 +3,7 @@ import { Context } from "../Context";
 import firebase from "firebase";
 
 const Header = () => {
-  const { authState, setAuthState } = useContext(Context);
+  const { authState, setAuthState, setMessages } = useContext(Context);
 
   // logout the user and clear the auth state
   const logoutUser = () => {
@@ -17,6 +17,9 @@ const Header = () => {
           username: null,
           avatarSrc: null,
         });
+
+        // clear the messages here
+        setMessages([]);
       })
       .catch((error) => {
         console.log(error);

@@ -4,9 +4,10 @@ import Messages from "./Messages";
 import Form from "./Form";
 import firebase from "firebase";
 import { Context } from "../Context";
+import { db } from "../firebase";
 
 const Home = ({ history }) => {
-  const { setAuthState } = useContext(Context);
+  const { setMessages, setAuthState } = useContext(Context);
 
   // stay logged in if the page is refreshed
   useEffect(() => {
@@ -26,6 +27,20 @@ const Home = ({ history }) => {
         history.push("/");
       }
     });
+  }, []);
+
+  useEffect(() => {
+    db.collection("messages")
+      .orderBy("timestamp", "asc")
+      .onSnapshot((snapshot) => {
+        setMessages(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            txt: doc.data().txt,
+            userAvatarSrc: doc.data().userAvatarSrc,
+          }))
+        );
+      });
   }, []);
 
   return (

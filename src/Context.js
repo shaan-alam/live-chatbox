@@ -1,6 +1,7 @@
 import firebase from "firebase";
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState } from "react";
 import { db } from "./firebase";
+
 export const Context = createContext({});
 
 export default function ContextProvider({ children }) {
@@ -10,20 +11,6 @@ export default function ContextProvider({ children }) {
     username: null,
     avatarSrc: null,
   });
-
-  useEffect(() => {
-    db.collection("messages")
-      .orderBy("timestamp", "asc")
-      .onSnapshot((snapshot) => {
-        setMessages(
-          snapshot.docs.map((doc) => ({
-            id: doc.id,
-            txt: doc.data().txt,
-            userAvatarSrc: doc.data().userAvatarSrc,
-          }))
-        );
-      });
-  }, []);
 
   const handleMessages = (message) => {
     db.collection("messages").add({
@@ -35,7 +22,7 @@ export default function ContextProvider({ children }) {
 
   return (
     <Context.Provider
-      value={{ messages, handleMessages, authState, setAuthState }}
+      value={{ messages, handleMessages, authState, setAuthState, setMessages }}
     >
       {children}
     </Context.Provider>
