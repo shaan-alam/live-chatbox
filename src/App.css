@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #a7cced;
+}
+
+.login {
+  padding: 2rem 4rem;
+  background: #fff;
+  border-radius: 7.5px;
+  text-align: center;
+}
+
+.login h1 {
+  margin-bottom: 2rem;
+  color: #63adf2;
+}
+
+.login button {
+  border-radius: 5px;
+  background: #304d6d;
+  border: none;
+  color: #fff;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.login button:hover {
+  background: #545e75;
+}

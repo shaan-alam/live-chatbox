@@ -2,6 +2,7 @@ import { useState } from "react";
 import Chat from "./components/Chat";
 import { auth } from "./firebase/config";
 import firebase from "firebase";
+import "./App.css";
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -17,6 +18,7 @@ const App = () => {
     <Chat user={user} />
   ) : (
     <div className="login">
+      <h1>Login</h1>
       <button onClick={loginWithGoogle}>Login with Google</button>
     </div>
   );
