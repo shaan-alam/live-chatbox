@@ -20,7 +20,7 @@
 .chat__header img {
   margin-right: 10px;
   border-radius: 50%;
-  width: 20%;
+  width: 15%;
 }
 
 .chat__messages {
@@ -49,7 +49,7 @@
 }
 
 .chat__messages .chat__message img {
-  width: 20%;
+  width: 15%;
   border-radius: 50%;
   margin-right: 12px;
 }
