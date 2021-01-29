@@ -1,9 +1,0 @@
-.home {
-  width: 100%;
-  box-shadow: 0 4px 4px lighten($primary-color, 40%);
-  height: 100vh;
-
-  @media screen and (max-width: 500px) {
-    width: 100%;
-  }
-}

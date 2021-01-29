@@ -1,9 +1,9 @@
 const Message = ({ message }) => {
   return (
-    <li className="message">
-      <img src={message.userAvatarSrc} alt="" />
-      <p>{message.txt}</p>
-    </li>
+    <div className="chat__message">
+      <img src={message.user.photoURL} alt="User avatar" />
+      <p>{message.message}</p>
+    </div>
   );
 };
 
