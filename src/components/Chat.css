@@ -7,7 +7,7 @@
 }
 
 .chat__header {
-  flex: 1;
+  flex: 0.1;
   background: #304d6d;
   padding: 1rem;
   display: flex;
@@ -25,7 +25,7 @@
 }
 
 .chat__messages {
-  height: 400px;
+  flex: 4;
   display: flex;
   flex-direction: column;
   padding: 0 0.5rem;
@@ -72,4 +72,22 @@
 
 .messages {
   height: 400px;
+}
+
+@media screen and (max-width: 600px) {
+  .chat__box {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .chat__input {
+  }
+
+  form input {
+    width: 90%;
+  }
+
+  form button {
+    width: 10%;
+  }
 }
