@@ -2,14 +2,16 @@ import firebase from "firebase";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAxVLsfvdfvhgXlaI6WS20ploZ-QIKF3go",
-  authDomain: "live-chatbox-26e1b.firebaseapp.com",
-  projectId: "live-chatbox-26e1b",
-  storageBucket: "live-chatbox-26e1b.appspot.com",
-  messagingSenderId: "940530101738",
-  appId: "1:940530101738:web:9648bdb7fc126041ec9693",
-  measurementId: "G-74TWXE6V7N",
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGE_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID
 };
+
+
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
