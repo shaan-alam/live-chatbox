@@ -7,7 +7,7 @@
 }
 
 .chat__header {
-  flex: 0.1;
+  flex: 1;
   background: #304d6d;
   padding: 1rem;
   display: flex;
@@ -25,7 +25,8 @@
 }
 
 .chat__messages {
-  flex: 4;
+  flex: 3;
+  max-height: 500px;
   display: flex;
   flex-direction: column;
   padding: 0 0.5rem;
@@ -70,8 +71,8 @@
   padding: 0.5rem 1rem;
 }
 
-.messages {
-  height: 400px;
+.chat__input {
+  flex: 1;
 }
 
 @media screen and (max-width: 600px) {
@@ -80,7 +81,18 @@
     width: 100vw;
   }
 
-  .chat__input {
+  .chat__header {
+    flex: 0.3;
+    padding: 10px;
+  }
+
+  .chat__header img {
+    width: 10%;
+  }
+
+  .chat__messages {
+    flex: 3;
+    min-height:600px;
   }
 
   form input {
