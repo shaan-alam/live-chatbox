@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { db } from "../firebase/config";
 import firebase from "firebase";
 import "./Chat.css";
@@ -8,6 +8,7 @@ import ScrollToBottom from "react-scroll-to-bottom";
 const Chat = ({ user }) => {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
+  const scrollRef = useRef();
 
   useEffect(() => {
     db.collection("messages")
@@ -22,15 +23,19 @@ const Chat = ({ user }) => {
   const sendMessages = (e) => {
     e.preventDefault();
 
-    const newMessage = {
-      message: input,
-      user: { displayName: user.displayName, photoURL: user.photoURL },
-      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-    };
+    if (input !== "") {
+      const newMessage = {
+        message: input,
+        user: { displayName: user.displayName, photoURL: user.photoURL },
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      };
 
-    db.collection("messages").add(newMessage);
+      db.collection("messages").add(newMessage);
 
-    setInput("");
+      setInput("");
+
+      scrollRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -40,11 +45,15 @@ const Chat = ({ user }) => {
         <p>{user.displayName}</p>
       </div>
       <div className="chat__messages">
-        <ScrollToBottom className="messages">
-          {messages.map((message) => (
-            <Message key={message.id} message={message} />
-          ))}
-        </ScrollToBottom>
+        {/* <ScrollToBottom className="messages"> */}
+        {messages.map((message) => (
+          <Message key={message.id} message={message} />
+        ))}
+        <div
+          ref={scrollRef}
+          style={{ float: "left", clear: "both", paddingTop: "4rem" }}
+        ></div>
+        {/* </ScrollToBottom> */}
       </div>
       <div className="chat__input">
         <form onSubmit={sendMessages}>
