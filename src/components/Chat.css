@@ -3,6 +3,7 @@
   border-radius: 7.5px;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 3px 28px 5px rgba(0, 0, 0, 0.145);
 }
 
 .chat__header {
@@ -62,6 +63,7 @@
 
 .chat__input button {
   background: #304d6d;
+  cursor: pointer;
   color: #fff;
   border: none;
   border-radius: 7.5px;

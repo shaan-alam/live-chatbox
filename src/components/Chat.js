@@ -23,17 +23,19 @@ const Chat = ({ user }) => {
   const sendMessages = (e) => {
     e.preventDefault();
 
-    const newMessage = {
-      message: input,
-      user: { displayName: user.displayName, photoURL: user.photoURL },
-      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-    };
+    if (input !== "") {
+      const newMessage = {
+        message: input,
+        user: { displayName: user.displayName, photoURL: user.photoURL },
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      };
 
-    db.collection("messages").add(newMessage);
+      db.collection("messages").add(newMessage);
 
-    setInput("");
+      setInput("");
 
-    scrollRef.current.scrollIntoView({ behavior: "smooth" });
+      scrollRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
