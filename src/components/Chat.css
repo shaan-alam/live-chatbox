@@ -25,8 +25,7 @@
 }
 
 .chat__messages {
-  flex: 3;
-  max-height: 500px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   padding: 0 0.5rem;
@@ -92,7 +91,7 @@
 
   .chat__messages {
     flex: 3;
-    min-height:600px;
+    min-height: 600px;
   }
 
   form input {
