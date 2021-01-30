@@ -1,0 +1,22 @@
+.chat__message {
+  display: flex;
+  align-items: center;
+  border-radius: 7.5px;
+  padding: 10px;
+  font-size: small;
+  width: fit-content;
+}
+
+.chat__message p {
+  color: #fff;
+  background: #545e75;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 7.5px;
+}
+
+.chat__message img {
+  width: 15%;
+  border-radius: 50%;
+  margin-right: 12px;
+}

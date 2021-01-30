@@ -3,7 +3,6 @@ import { db } from "../firebase/config";
 import firebase from "firebase";
 import "./Chat.css";
 import Message from "./Message";
-import ScrollToBottom from "react-scroll-to-bottom";
 
 const Chat = ({ user }) => {
   const [input, setInput] = useState("");
