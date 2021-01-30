@@ -15,7 +15,6 @@ const App = () => {
     })
   }, [])
 
-
   const loginWithGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider).then((result) => {

@@ -44,7 +44,6 @@ const Chat = ({ user }) => {
         <p>{user.displayName}</p>
       </div>
       <div className="chat__messages">
-        {/* <ScrollToBottom className="messages"> */}
         {messages.map((message) => (
           <Message key={message.id} message={message} />
         ))}
@@ -52,7 +51,6 @@ const Chat = ({ user }) => {
           ref={scrollRef}
           style={{ float: "left", clear: "both", paddingTop: "4rem" }}
         ></div>
-        {/* </ScrollToBottom> */}
       </div>
       <div className="chat__input">
         <form onSubmit={sendMessages}>
@@ -70,3 +68,4 @@ const Chat = ({ user }) => {
 };
 
 export default Chat;
+
